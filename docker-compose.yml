@@ -23,6 +23,7 @@ services:
     restart: 'no'
     environment:
       TZ: ${DEFAULT_TIMEZONE:-Europe/Kiev} 
+      XDEBUG_CONFIG: "client_host=${DEBUG_IP:-0.0.0.0}"
     volumes:
       - ./app:/var/www/html
     depends_on:

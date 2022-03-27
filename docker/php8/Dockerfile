@@ -11,6 +11,10 @@ RUN docker-php-ext-configure pdo_mysql --with-pdo-mysql=mysqlnd \
     && docker-php-ext-install pdo_mysql 
     #&& docker-php-ext-install gd intl curl mbstring 
 
+RUN pecl install xdebug \
+    && docker-php-ext-enable xdebug \
+    && echo "xdebug.mode=develop,debug" >> /usr/local/etc/php/conf.d/docker-php-ext-xdebug.ini
+
 RUN curl -s https://getcomposer.org/installer | php \
     && mv composer.phar /usr/local/bin/composer
 
