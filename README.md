@@ -1,8 +1,8 @@
 # webstart-php8
 
-$ docker-compose build
-
 $ cp .env.sample .env
+
+$ docker-compose build
 
 $ docker-compose up -d
 
