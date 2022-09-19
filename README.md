@@ -9,3 +9,5 @@ $ docker-compose up -d
 
 $ docker-compose exec backend ./bin/init.sh
 ```
+
+http://localhost:8080
