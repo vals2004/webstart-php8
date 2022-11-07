@@ -11,7 +11,7 @@ services:
     environment:
       TZ: ${DEFAULT_TIMEZONE:-Europe/Kiev} 
     volumes:
-      - ./app/public:/var/www/html
+      - ./app:/var/www/html
     env_file:
       - .env
 
